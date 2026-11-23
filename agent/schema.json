@@ -1,0 +1,190 @@
+{
+  "$comment": "Per-app research row schema. Enforced on every researcher agent via forced structured output. maxLength/minItems document intent; the API runner strips constraints the structured-outputs endpoint doesn't support and validates them client-side.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "one_liner",
+    "auth_methods",
+    "primary_auth",
+    "auth_note",
+    "access_gate",
+    "access_note",
+    "api_styles",
+    "api_breadth",
+    "api_note",
+    "webhooks",
+    "official_mcp",
+    "mcp_note",
+    "buildability",
+    "main_blocker",
+    "verdict",
+    "evidence",
+    "confidence",
+    "gotchas"
+  ],
+  "properties": {
+    "one_liner": {
+      "type": "string",
+      "maxLength": 140
+    },
+    "auth_methods": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "oauth2",
+          "api_key",
+          "basic_auth",
+          "personal_access_token",
+          "jwt",
+          "session_token",
+          "aws_sigv4",
+          "mtls",
+          "none",
+          "other",
+          "unknown"
+        ]
+      }
+    },
+    "primary_auth": {
+      "enum": [
+        "oauth2",
+        "api_key",
+        "basic_auth",
+        "personal_access_token",
+        "jwt",
+        "session_token",
+        "aws_sigv4",
+        "mtls",
+        "none",
+        "other",
+        "unknown"
+      ]
+    },
+    "auth_note": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "access_gate": {
+      "enum": [
+        "free_self_serve",
+        "paid_plan",
+        "approval_required",
+        "partner_gated",
+        "no_public_api",
+        "unknown"
+      ]
+    },
+    "access_note": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "api_styles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "rest",
+          "graphql",
+          "soap",
+          "grpc",
+          "websocket",
+          "webhook_only",
+          "sdk_only",
+          "cli_tool",
+          "none",
+          "unknown"
+        ]
+      }
+    },
+    "api_breadth": {
+      "enum": [
+        "broad",
+        "medium",
+        "narrow",
+        "none",
+        "unknown"
+      ]
+    },
+    "api_note": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "webhooks": {
+      "type": "boolean"
+    },
+    "official_mcp": {
+      "type": "boolean"
+    },
+    "mcp_note": {
+      "type": "string",
+      "maxLength": 180
+    },
+    "buildability": {
+      "enum": [
+        "green",
+        "yellow",
+        "red"
+      ]
+    },
+    "main_blocker": {
+      "enum": [
+        "none",
+        "paid_plan",
+        "approval_required",
+        "partner_gated",
+        "no_public_api",
+        "cli_not_api",
+        "enterprise_only",
+        "docs_unclear",
+        "other"
+      ]
+    },
+    "verdict": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim",
+          "url"
+        ],
+        "properties": {
+          "claim": {
+            "enum": [
+              "auth",
+              "access",
+              "api",
+              "mcp",
+              "overview"
+            ]
+          },
+          "url": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 140
+          }
+        }
+      }
+    },
+    "confidence": {
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "gotchas": {
+      "type": "string",
+      "maxLength": 200
+    }
+  }
+}
