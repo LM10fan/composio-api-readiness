@@ -1,0 +1,141 @@
+{
+  "expected": 100,
+  "researched": 70,
+  "missing": [
+    "Aircall",
+    "Shopify",
+    "BigCommerce",
+    "Ecwid",
+    "Amazon Selling Partner",
+    "fanbasis",
+    "Ahrefs",
+    "Clay",
+    "Vercel",
+    "Netlify",
+    "Neo4j",
+    "Notion",
+    "Asana",
+    "Coda",
+    "Smartsheet",
+    "Harvest",
+    "Paygent Connect",
+    "QuickBooks",
+    "Brex",
+    "Ramp",
+    "PitchBook",
+    "NotebookLM",
+    "Otter AI",
+    "Fathom",
+    "Consensus",
+    "Reducto",
+    "higgsfield",
+    "Mermaid CLI",
+    "YouTube Transcript",
+    "Grain"
+  ],
+  "errors": [
+    {
+      "id": 29,
+      "name": "Aircall",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 43,
+      "name": "BigCommerce",
+      "error": "Unterminated string starting at: line 5 column 15 (char 362)"
+    },
+    {
+      "id": 47,
+      "name": "Ecwid",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 49,
+      "name": "Amazon Selling Partner",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 50,
+      "name": "fanbasis",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 53,
+      "name": "Ahrefs",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 60,
+      "name": "Clay",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 62,
+      "name": "Vercel",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 63,
+      "name": "Netlify",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 66,
+      "name": "Neo4j",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "error": "Expecting ':' delimiter: line 1 column 6 (char 5)"
+    },
+    {
+      "id": 75,
+      "name": "Asana",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 78,
+      "name": "Coda",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 79,
+      "name": "Smartsheet",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 80,
+      "name": "Harvest",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 84,
+      "name": "Paygent Connect",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 86,
+      "name": "QuickBooks",
+      "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+    },
+    {
+      "id": 88,
+      "name": "Brex",
+      "error": "OpenRouter free-model API free daily quota is exhausted. {\"error\":{\"message\":\"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day: https://openrouter.ai/settings/credits?utm_source=api&utm_campaign=free_daily_limit\",\"code\":429,\"metadata\":{\"headers\":{\"X-RateLimit-Limit\":\"50\",\"X-RateLimit-Remaining\":\"0\",\"X-RateLimit-Reset\":\"1795478400000\"},\"limit_source\":\"openrouter_free_tier_daily\",\"remedy_hint\":\"Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.\",\""
+    }
+  ],
+  "providers": [
+    "Tavily search + Groq free API tier",
+    "Tavily search + OpenRouter free-model API"
+  ],
+  "provider_row_counts": {
+    "Tavily search + Groq free API tier": 37,
+    "Tavily search + OpenRouter free-model API": 33
+  }
+}
