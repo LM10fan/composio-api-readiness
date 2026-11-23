@@ -6,7 +6,7 @@ This is a partially completed, resumable research run: 70 of 100 apps. The case-
 1. Create a virtual environment and install `requirements.txt`.
 2. Set `TAVILY_API_KEY` and either `GROQ_API_KEY` or `OPENROUTER_API_KEY`.
 3. Run: `python agent/research_free_multi.py --provider groq --workers 1` or `--provider openrouter --workers 1`.
-4. The runner writes per-app checkpoints under `data/live_research/` and resumes. Inspect `data/live_coverage.json` and `data/live_raw.json`.
+4. The runner bootstraps per-app checkpoints from the included 70-row `data/live_raw.json` on its first run, then saves further checkpoints under `data/live_research/` and resumes without repeating completed rows. Inspect `data/live_coverage.json` and `data/live_raw.json`.
 5. Open `docs/submission.html` in a browser.
 
 ## Limits
